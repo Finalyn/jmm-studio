@@ -166,10 +166,11 @@ a { color: inherit; text-decoration: none; }
 .detail__subtitle { font-family: var(--head); font-weight: 600; font-size: 22px; margin-top: 60px; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 24px; grid-auto-flow: dense; }
 .gallery--big { grid-template-columns: repeat(5, 1fr); }
+.gallery--4 { grid-template-columns: repeat(4, 1fr); }
 .gallery > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); display: block; cursor: zoom-in; transition: opacity .2s; }
 .gallery > img:hover { opacity: .85; }
-@media (max-width: 900px) { .gallery--big { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 560px) { .gallery--big { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .gallery--big, .gallery--4 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .gallery--big, .gallery--4 { grid-template-columns: repeat(2, 1fr); } }
 
 /* ===== Lightbox ===== */
 .lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.93); padding: 24px; }
