@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JMM — Studio de création de jeux</title>
+  <meta name="description" content="JMM crée des jeux et des expériences sur toutes les plateformes : serveurs FiveM (Harmonie), serveurs Roblox (Boxit), et des jeux web, mobile et PC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">JMM</a>
+      <a href="#contact" class="btn btn--solid header__cta">Nous rejoindre</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__bg">
+      <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="videos/jmm-mix.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__filter"></div>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">On construit des mondes où les joueurs reviennent.</h1>
+      <p class="hero__sub">
+        JMM crée des jeux et des expériences sur toutes les plateformes : serveurs FiveM,
+        serveurs Roblox, jeux web, mobile et PC. <strong>Harmonie</strong> et
+        <strong>Boxit</strong> ne sont que le début.
+      </p>
+      <div class="hero__actions">
+        <a href="#jeux" class="btn btn--solid">Voir nos jeux</a>
+        <a href="#contact" class="btn btn--ghost">Nous contacter</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== NOS DERNIERS JEUX (marquee) ===== -->
+  <section class="games" id="jeux">
+    <div class="section-head">
+      <h2 class="section-title">Nos derniers jeux</h2>
+      <p class="section-sub">Ce qui tourne en ce moment, et ce qui arrive.</p>
+    </div>
+
+    <div class="ticker">
+      <div class="ticker__track">
+        <!-- série 1 -->
+        <article class="gcard"><img src="images/harmonie-1.png" alt="Harmonie RP" /><div class="gcard__meta"><span class="gcard__tag">FiveM</span><h3 class="gcard__name">Harmonie RP</h3></div></article>
+        <article class="gcard"><img src="images/harmonie-3.jpg" alt="Harmonie RP v2" /><div class="gcard__meta"><span class="gcard__tag">FiveM</span><h3 class="gcard__name">Harmonie RP v2</h3></div></article>
+        <article class="gcard"><img src="images/boxit-1.png" alt="Boxit" /><div class="gcard__meta"><span class="gcard__tag">Roblox</span><h3 class="gcard__name">Boxit</h3></div></article>
+        <article class="gcard"><img src="images/boxit-2.png" alt="Boxit" /><div class="gcard__meta"><span class="gcard__tag">Roblox</span><h3 class="gcard__name">Boxit</h3></div></article>
+        <article class="gcard"><img src="images/cityguess.webp" alt="City Guess" /><div class="gcard__meta"><span class="gcard__tag">Web · en cours</span><h3 class="gcard__name">City Guess</h3></div></article>
+
+        <!-- série 2 (duplicata pour boucle fluide) -->
+        <article class="gcard" aria-hidden="true"><img src="images/harmonie-1.png" alt="" /><div class="gcard__meta"><span class="gcard__tag">FiveM</span><h3 class="gcard__name">Harmonie RP</h3></div></article>
+        <article class="gcard" aria-hidden="true"><img src="images/harmonie-3.jpg" alt="" /><div class="gcard__meta"><span class="gcard__tag">FiveM</span><h3 class="gcard__name">Harmonie RP v2</h3></div></article>
+        <article class="gcard" aria-hidden="true"><img src="images/boxit-1.png" alt="" /><div class="gcard__meta"><span class="gcard__tag">Roblox</span><h3 class="gcard__name">Boxit</h3></div></article>
+        <article class="gcard" aria-hidden="true"><img src="images/boxit-2.png" alt="" /><div class="gcard__meta"><span class="gcard__tag">Roblox</span><h3 class="gcard__name">Boxit</h3></div></article>
+        <article class="gcard" aria-hidden="true"><img src="images/cityguess.webp" alt="" /><div class="gcard__meta"><span class="gcard__tag">Web · en cours</span><h3 class="gcard__name">City Guess</h3></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOS UNIVERS (cartes vers pages dédiées) ===== -->
+  <section class="cats" id="univers">
+    <div class="section-head">
+      <h2 class="section-title">Nos univers</h2>
+      <p class="section-sub">Trois mondes, une même obsession : que les joueurs restent.</p>
+    </div>
+
+    <div class="univers">
+      <a class="ucard" href="harmonie.html">
+        <img src="images/harmonie-18.png" alt="Harmonie" class="card-zoom" />
+        <div class="ucard__overlay"></div>
+        <div class="ucard__body">
+          <h3>Harmonie</h3>
+          <span class="ucard__link">Découvrir l'univers
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="ucard" href="boxit.html">
+        <img src="images/boxit-1.png" alt="Boxit" />
+        <div class="ucard__overlay"></div>
+        <div class="ucard__body">
+          <h3>Boxit</h3>
+          <span class="ucard__link">Découvrir l'univers
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a class="ucard" href="coming-soon.html">
+        <img src="images/cityguess.webp" alt="Coming soon" />
+        <div class="ucard__overlay"></div>
+        <div class="ucard__body">
+          <h3>Coming soon</h3>
+          <span class="ucard__link">Découvrir l'univers
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <h2 class="contact__title">Rejoins la communauté</h2>
+      <p class="contact__sub">Des milliers de joueurs nous suivent déjà. Rejoins le Discord pour jouer, discuter et ne rien rater de nos sorties.</p>
+      <a href="#" class="btn btn--solid btn--lg">Rejoindre le Discord</a>
+      <div class="contact__socials">
+        <a href="#">Discord</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">YouTube</a>
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="logo logo--sm">JMM</span>
+      <span class="footer__copy">© 2026 JMM · Studio de création de jeux</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>

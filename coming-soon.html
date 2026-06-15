@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming soon — Web, Mobile & PC | JMM</title>
+  <meta name="description" content="Les prochains jeux JMM sur web, mobile et PC, à commencer par City Guess." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">JMM</a>
+      <a href="index.html#contact" class="btn btn--solid header__cta">Nous rejoindre</a>
+    </div>
+  </header>
+
+  <!-- SOUS-HERO -->
+  <section class="subhero">
+    <div class="subhero__bg">
+      <video autoplay muted loop playsinline preload="auto"><source src="videos/jmm-mix.mp4" type="video/mp4" /></video>
+      <div class="hero__filter"></div>
+    </div>
+    <div class="subhero__content">
+      <a href="index.html#univers" class="back">← Retour aux univers</a>
+      <span class="subhero__type">Web · Mobile · PC</span>
+      <h1 class="subhero__title">Coming soon</h1>
+      <p class="subhero__sub">
+        On ne fait pas que du RP et du Roblox. La suite se construit sur le web, le mobile et
+        le PC, à commencer par City Guess.
+      </p>
+      <a href="index.html#contact" class="btn btn--solid">Être prévenu</a>
+    </div>
+  </section>
+
+  <!-- DÉTAIL -->
+  <section class="detail">
+    <div class="detail__inner">
+      <div class="detail__intro">
+        <h2 class="section-title">En préparation</h2>
+        <p>Nos prochains projets multi-plateformes. Le premier est déjà jouable.</p>
+      </div>
+
+      <div class="glist">
+        <article class="gitem"><img src="images/cityguess.webp" alt="City Guess" /><div><span class="gitem__tag">Web · en cours</span><h4>City Guess</h4></div></article>
+        <article class="gitem gitem--soon"><div class="gitem__ph"></div><div><span class="gitem__tag">Mobile</span><h4>Bientôt</h4></div></article>
+        <article class="gitem gitem--soon"><div class="gitem__ph"></div><div><span class="gitem__tag">PC</span><h4>Bientôt</h4></div></article>
+      </div>
+
+      <h3 class="detail__subtitle">City Guess</h3>
+      <p class="detail__intro" style="margin-top:14px">
+        Jeu de géographie multijoueur : duels en temps réel, défis quotidiens, classement
+        mondial et modes variés (Monde, Europe, France, Suisse).
+      </p>
+      <div class="gallery" style="max-width: 1000px;">
+        <img src="images/cityguess.webp" alt="City Guess - aperçu 1" />
+        <img src="images/cityguess-2.webp" alt="City Guess - aperçu 2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <h2 class="contact__title">Sois prévenu en premier</h2>
+      <p class="contact__sub">Rejoins le Discord pour suivre le développement de nos prochains jeux et tester en avant-première.</p>
+      <a href="#" class="btn btn--solid btn--lg">Rejoindre le Discord</a>
+      <div class="contact__socials">
+        <a href="#">Discord</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">YouTube</a>
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="logo logo--sm">JMM</a>
+      <span class="footer__copy">© 2026 JMM · Studio de création de jeux</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
