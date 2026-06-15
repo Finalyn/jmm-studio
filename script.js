@@ -56,3 +56,24 @@ if (galleryImgs.length) {
     sx = null;
   });
 }
+
+// ===== Liens communauté pas encore actifs : toast "Coming soon" =====
+(function () {
+  const soonLinks = document.querySelectorAll('.contact a[href="#"]');
+  if (!soonLinks.length) return;
+  let toastEl, timer;
+  const toast = (msg) => {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'toast';
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(timer);
+    timer = setTimeout(() => toastEl.classList.remove('is-show'), 2200);
+  };
+  soonLinks.forEach((a) =>
+    a.addEventListener('click', (e) => { e.preventDefault(); toast('Coming soon'); })
+  );
+})();
