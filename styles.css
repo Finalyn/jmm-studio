@@ -165,7 +165,24 @@ a { color: inherit; text-decoration: none; }
 .detail__intro p { color: var(--muted); font-size: 17px; max-width: 64ch; margin-top: 14px; }
 .detail__subtitle { font-family: var(--head); font-weight: 600; font-size: 22px; margin-top: 60px; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-top: 24px; }
-.gallery img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); display: block; }
+.gallery img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); display: block; cursor: zoom-in; transition: opacity .2s; }
+.gallery img:hover { opacity: .85; }
+
+/* ===== Comparateur avant / après ===== */
+.ba { position: relative; width: 100%; aspect-ratio: 1870 / 841; margin-top: 22px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); user-select: none; touch-action: none; cursor: ew-resize; --pos: 50%; }
+.ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.ba__before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba__divider { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: #fff; pointer-events: none; box-shadow: 0 0 12px rgba(0,0,0,.6); }
+.ba__handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; border-radius: 50%; background: #fff; color: #0a0a0a; display: grid; place-items: center; font-size: 18px; box-shadow: 0 2px 12px rgba(0,0,0,.45); }
+.ba__tag { position: absolute; bottom: 14px; font-family: var(--head); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; background: rgba(0,0,0,.55); padding: 6px 12px; border-radius: 999px; pointer-events: none; }
+.ba__tag--l { left: 14px; }
+.ba__tag--r { right: 14px; }
+
+/* ===== Lightbox ===== */
+.lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.92); padding: 24px; cursor: zoom-out; }
+.lightbox.is-open { display: flex; }
+.lightbox img { max-width: 95vw; max-height: 92vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+.lightbox__close { position: absolute; top: 16px; right: 22px; background: none; border: 0; color: #fff; font-size: 40px; line-height: 1; cursor: pointer; }
 
 /* ===== Contact ===== */
 .contact { border-top: 1px solid var(--line); padding: 120px 0; text-align: center; }
