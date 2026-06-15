@@ -6,17 +6,6 @@ if (header) {
   onScroll();
 }
 
-// ===== Comparateur avant / après (drag + survol) =====
-document.querySelectorAll('.ba').forEach((ba) => {
-  const setPos = (clientX) => {
-    const r = ba.getBoundingClientRect();
-    const p = Math.max(0, Math.min(100, ((clientX - r.left) / r.width) * 100));
-    ba.style.setProperty('--pos', p + '%');
-  };
-  ba.addEventListener('pointermove', (e) => setPos(e.clientX));
-  ba.addEventListener('pointerdown', (e) => setPos(e.clientX));
-});
-
 // ===== Lightbox galerie (clic = plein écran, navigation flèches / swipe) =====
 const galleryImgs = [...document.querySelectorAll('.gallery img')];
 if (galleryImgs.length) {
